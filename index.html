@@ -1,94 +1,113 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext">
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>2K DRUKARNIA OFFSETOWA PRODUCENT OPAKOWAŃ</title>
+
+    <title>A Basic HTML5 Template</title>
+    <meta name="description" content="A simple HTML5 Template for new projects.">
+    <meta name="author" content="SitePoint">
+
+    <meta property="og:title" content="A Basic HTML5 Template">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="A simple HTML5 Template for new projects.">
+    <meta property="og:image" content="image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <style>
+      * { margin: 0; padding: 0; }
+
+      .header  { grid-area: header; }
+      .main    { grid-area: main; }
+      .sidebar { grid-area: sidebar; }
+      .footer  { grid-area: footer; }
+      .container { display: grid; grid-template-columns: 25% auto; grid-template-rows: auto; grid-template-areas: "header header" "sidebar main" "footer footer"; }
+
+      .header .inner { margin: 2em 2em 0 2em; border-bottom: 4px solid #231f20; padding: 1em; display: grid; grid-template-columns: 40% 60%; grid-template-rows: auto; grid-template-areas: "logo nav" "logo lang"; }
+      .header .inner .logo { grid-area: logo; display: flex; align-items: center; justify-content: center; }
+      .header .inner .nav  { grid-area: nav;  display: flex; align-items: flex-start; justify-content: flex-end; }
+      .header .inner .lang { grid-area: lang; display: flex; align-items: flex-end; justify-content: flex-end; }
+
+      .header .inner .logo img { width: 400px; margin: 2em 0; }
+      .header .inner ul { list-style: none; display: block; }
+      .header .inner ul li { display: inline-block; padding: 0 0 0 1em; }
+      .header .inner ul li a { display: inline-block; font-size: 1.3em; padding: .8em 1.2em; text-decoration: none; border-radius: 2em; text-transform: lowercase; }
+
+      .footer .inner { background-color: #7b7979; margin: 0 2em 2em 2em; border-top: 4px solid #231f20; padding: 1em; display: grid; grid-template-columns: 50% 25% 25%; grid-template-rows: auto; grid-template-areas: "contact cert1 cert2"; }
+      .footer .inner .contact { grid-area: contact; display: flex; align-items: center; justify-content: center;  }
+      .footer .inner .cert1   { grid-area: nav;     display: flex; align-items: center; justify-content: center; }
+      .footer .inner .cert2   { grid-area: lang;    display: flex; align-items: center; justify-content: center; }
+
+      .cyan-btn    { background-color: #00adef; color: #ffffff; }
+      .yellow-btn  { background-color: #f5ef03; color: #231f20; }
+      .magenta-btn { background-color: #ec008c; color: #ffffff; }
+      .black-btn   { background-color: #231f20; color: #ffffff; }
+
+      @media only screen and (max-width: 1500px) {
+        .header .inner .logo img { margin: 0; }
+        .header .inner ul li a { padding: .5em 1.0em; border-radius: 2em; }
+      }
+
+      @media only screen and (max-width: 1200px) {
+        .header .inner { grid-template-columns: 50% 50%; }
+        .header .inner ul li { padding: 0; }
+      }
+
+      @media only screen and (max-width: 1015px) {
+        .header .inner { grid-template-columns: 100%; grid-template-areas: "logo" "nav" "lang"; }
+        .header .inner .nav  { align-items: center; justify-content: center; padding: 1em 0; }
+        .header .inner .lang { align-items: center; justify-content: center; padding: 1em 0; }
+      }
+
+      @media only screen and (max-width: 560px) {
+        .header .inner ul li a { padding: .2em .4em; border-radius: 1em; }
+      }
+    </style>
   </head>
 
   <body>
-    <nav>
-      <a href="#2k" class="logo active"><img src="./assets/images/logo.jpg" alt=""></a>
-      <a href="#o-nas">O nas</a>
-      <a href="#certyfikat-fsc">Certyfikat FSC</a>
-      <a href="#oferta">Oferta</a>
-      <a href="#dzial-graficzny">Dział graficzny</a>
-      <a href="#kontakt">Tu jesteśmy</a>
-      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
-    </nav>
+    <div class="container">
+      <div class="header">
+        <div class="inner">
+          <div class="logo"><img src="./assets/images/logo.svg"></div>
+          <div class="nav">
+            <ul>
+              <li><a class="cyan-btn" href="#">Home</a></li>
+              <li><a class="magenta-btn" href="#">About us</a></li>
+              <li><a class="yellow-btn" href="#">Offer</a></li>
+              <li><a class="black-btn" href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="lang">
+            <ul>
+              <li><a href="#">PL</a></li>
+              <li><a href="#">EN</a></li>
+              <li><a href="#">DE</a></li>
+              <li><a href="#">IT</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <div class="parallax parallax-0"></div>
-
-    <section id="2k">
-      <p>Drukarnia 2K istnieje na rynku poligraficznym od 1986 roku. Od samego początku poszukiwaliśmy swojego miejsca na rynku, by ostatecznie wyspecjalizować się w produkcji opakowań.</p>
-      <p>Nowoczesny, stale rozwijany park maszynowy oraz fachowa kadra pozwalają zapewnić naszym klientom bezpieczeństwo, terminowość dostaw i wysoką jakość produktu.</p>
-      <p>Łączymy doświadczenie, dostępne technologie i pasję, aby sprostać oczekiwaniom naszych klientów.</p>
-    </section>
-
-    <div class="grid">
-      <img class="grid-item" src="./assets/images/01.jpg" alt="">
-      <img class="grid-item" src="./assets/images/02.jpg" alt="">
-      <img class="grid-item" src="./assets/images/03.jpg" alt="">
-      <img class="grid-item" src="./assets/images/04.jpg" alt="">
-      <img class="grid-item" src="./assets/images/05.jpg" alt="">
-      <img class="grid-item" src="./assets/images/06.jpg" alt="">
-      <img class="grid-item" src="./assets/images/07.jpg" alt="">
-      <img class="grid-item" src="./assets/images/08.jpg" alt="">
-      <img class="grid-item" src="./assets/images/13.jpg" alt="">
-      <img class="grid-item" src="./assets/images/14.jpg" alt="">
-      <img class="grid-item" src="./assets/images/15.jpg" alt="">
-      <img class="grid-item" src="./assets/images/16.jpg" alt="">
+      <div class="main">MAIN</div>
+      <div class="sidebar">SIDEBAR</div>
+      <div class="footer">
+        <div class="inner">
+          <div class="contact">
+            <ul>
+              <li><img src="./assets/images/contact1.svg">Jędrzejowska 13/17, 93-636 Łódź<li>
+              <li><img src="./assets/images/contact2.svg">drukarnia@2k.com.pl<li>
+              <li><img src="./assets/images/contact3.svg">+48&nbsp;512&nbsp;829&nbsp;993<li>
+              <li><img src="./assets/images/contact4.svg">www.2k.com.pl<li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <section id="o-nas">
-      <p>Nasza kadra, to zespół fachowców gotowych na nowe wyzwania technologiczne i logistyczne.</p>
-      <p>Wieloletnie doświadczenie zawodowe, specjalistyczne wykształcenie oraz nieograniczona wyobraźnia pozwala nam zaoferować Państwu niebanalny produkt, wykonany z dużą starannością przy zachowaniu rozsądnych kosztów.</p>
-      <p>Inwestujemy w nowe rozwiązania offsetowe i cyfrowe, aby sprostać wciąż rosnącym wymaganiom klientów.</p>
-    </section>
-
-    <div class="parallax parallax-1"></div>
-
-    <section id="certyfikat-fsc">
-      <h2>Certyfikat FSC</h2>
-      <p>W trosce o środowisko uzyskaliśmy Certyfikat FSC FOREST STEWARDSHIP COUNCIL. Certyfikat FSC  stanowi dowód, że produkcja, przetwarzanie i handel drewnem oraz produktami pochodzenia leśnego odbywa się w zgodzie z obowiązującymi przepisami UE.</p>
-      <figure>
-        <img src="./assets/images/fsc.jpg" alt="">
-        <img src="./assets/images/eko.jpg" alt="">
-      </figure>
-    </section>
-
-    <div class="parallax parallax-2"></div>
-
-    <section id="oferta">
-      <h2>Oferta</h2>
-      <p>Wykonujemy kompleksowe zamówienia na wszelkiego rodzaju produkty poligraficzne, jak np. książki, katalogi, gazetki , foldery, ulotki, papiery firmowe, koperty, teczki, plakaty, wizytówki, kalendarze, naklejki, czy etykiety, torby reklamowe  począwszy od projektu, poprzez druk, procesy wykończeniowe, aż po dostarczenie gotowego produktu do Klienta.</p>
-      <p>Szczególnie specjalizujemy się w produkcji opakowań na wszelkiego rodzaju produkty: delikatną bieliznę, kosmetyki, rajstopy, artykuły ogrodnicze i chemiczne.</p>
-      <p>Wykonujemy opakowania zbiorcze z kartonu, tektury i tektury kaszerowanej z nadrukiem.</p>
-      <p>W naszej ofercie znajdziecie Państwo również produkty ekspozycyjne: stojaki, standy i display'e.</p>
-    </section>
-
-    <section id="dzial-graficzny">
-      <h2>Dział graficzny</h2>
-      <p>Nasz dział graficzny zawsze służy pomocą i zapewnia profesjonalną obsługę.</p>
-      <p>Posiadamy własne studio DTP, które pozwala na przygotowanie projektów do druku od podstaw we własnym zakresie bądź w oparciu o materiały dostarczone przez klienta. Do każdego z produktów podchodzimy nieco inaczej, gdyż każdy z nich jest na swój sposób wyjątkowy. Jednakże zawsze dbamy o to, aby wszystkie wykonywane przez nas prace same w sobie stanowiły gwarancję najwyższej jakości.</p>
-    </section>
-
-    <div class="parallax parallax-3"></div>
-
-    <section id="kontakt">
-      <h2>Tu jesteśmy</h2>
-      <p>Dużym ułatwieniem dla  klientów jest położenie naszej drukarni w samym centrum Polski, w pobliżu skrzyżowania autostrad A1 i A2.</p>
-      <address>
-        <i class="fas fa-phone"></i><a href="tel:+48512141215">512-141-215</a><br>
-        <i class="far fa-envelope"></i><a href="mailto:marketing@2k.com.pl">marketing@2k.com.pl</a><br>
-        <i class="fas fa-map-marker-alt"></i><a href="https://goo.gl/maps/x1E5yK1eunPp5gA36">ul. Płocka 35/43, 93-134 Łódź</a>
-      </address>
-    </section>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2470.482494311883!2d19.48150001577404!3d51.742500179674416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a34bc15e3f5af%3A0x9929bd340550dd77!2zUMWCb2NrYSAzNS80MywgOTAtMDAxIMWBw7Nkxbo!5e0!3m2!1spl!2spl!4v1576960652499!5m2!1spl!2spl" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
+
