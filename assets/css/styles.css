@@ -39,6 +39,7 @@ body { color: var(--black); background-color: var(--white); }
 .main .flex { display: flex; justify-content: center; flex-wrap: wrap; }
 .main .flex img { width: 250px; margin: 1em; }
 .main .flow .images { text-align: center }
+.main.contact .inner { grid-template-columns: 50% 50%; }
 
 /* footer */
 .footer .inner { background-color: var(--gray); border-top: 4px solid var(--black); padding: 1em; display: grid; grid-template-columns: 50% 25% 25%; grid-template-rows: auto; grid-template-areas: "contact cert1 cert2"; }
