@@ -19,14 +19,14 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <style>
-      * { margin: 0; padding: 0; }
+      * { margin: 0; padding: 0; font-size: 1.2rem; font-family: "GillSansMT", "ABeeZee", sans-serif;}
+      body { color: #231f20; }
 
       /* document layout */
       .header  { grid-area: header; }
-      .main    { grid-area: main; }
-      .sidebar { grid-area: sidebar; }
+      .main    { grid-area: main; padding: 3em; }
       .footer  { grid-area: footer; }
-      .container { display: grid; grid-template-columns: 25% auto; grid-template-rows: auto; grid-template-areas: "header header" "sidebar main" "footer footer"; }
+      .container { display: grid; grid-template-columns: 100%; grid-template-rows: auto; grid-template-areas: "header" "main" "footer"; }
 
       /* header */
       .header .inner { border-bottom: 4px solid #231f20; padding: 1em; display: grid; grid-template-columns: 40% 60%; grid-template-rows: auto; grid-template-areas: "logo nav" "logo lang"; }
@@ -37,17 +37,28 @@
       .header .inner .logo img { width: 400px; }
       .header .inner ul { list-style: none; display: block; }
       .header .inner ul li { display: inline-block; }
-      .header .inner ul li a { display: inline-block; font-size: 1.3em; padding: .5em 1em; text-decoration: none; border-radius: 2em; text-transform: lowercase; }
+      .header .inner ul li a { display: inline-block; padding: .5em 1em; text-decoration: none; border-radius: 2em; text-transform: lowercase; }
+
+      /* main */
+      .main .inner { display: grid; grid-template-columns: 30% 70%; grid-template-rows: auto; grid-template-areas: "sidebar content"; }
+      .main .inner .sidebar { grid-area: sidebar; border-right: 4px solid #231f20; display: flex; align-items: center; justify-content: center; }
+      .main .inner .content { grid-area: content; padding-left: 3em; }
 
       /* footer */
       .footer .inner { background-color: #7b7979; border-top: 4px solid #231f20; padding: 1em; display: grid; grid-template-columns: 50% 25% 25%; grid-template-rows: auto; grid-template-areas: "contact cert1 cert2"; }
-      .footer .inner .contact { grid-area: contact; display: flex; align-items: center; justify-content: center;  }
+      .footer .inner .contact { grid-area: contact; display: flex; align-items: center; justify-content: center; }
       .footer .inner .cert1   { grid-area: cert1;   display: flex; align-items: center; justify-content: center; }
       .footer .inner .cert2   { grid-area: cert2;   display: flex; align-items: center; justify-content: center; }
 
       .footer .inner ul { list-style: none; display: block; color: #ffffff; }
-      .footer .inner ul li { padding: .2em; font-size: 1.2em; }
+      .footer .inner ul li { padding: .2em; }
       .footer .inner ul li img { vertical-align: middle; padding: 0 0.5em; }
+
+      /* typography */
+      h1 { display: inline-block; padding: .5em 1em; border-radius: 1em; background-color: #7b7979; color: #ffffff; margin: 0 0 2em 0; }
+      h2 { margin: 0 0 2em 0; }
+      p { padding: 0 0 2em 0; }
+      ul { list-style-position: inside; }
 
       /* buttons */
       .cyan-btn    { background-color: #00adef; color: #ffffff; }
@@ -58,19 +69,26 @@
       /* responsive design */
       @media only screen and (max-width: 1020px) {
         .header .inner { grid-template-columns: 100%; grid-template-areas: "logo" "nav" "lang"; }
-        .footer .inner { grid-template-columns: 100%; grid-template-areas: "contact" "cert1" "cert2"; }
         .header .inner .nav  { align-items: center; justify-content: center; padding: 1em 0; }
         .header .inner .lang { align-items: center; justify-content: center; padding: 1em 0; }
+        .main { padding: 2em; }
+        .main .inner .content { padding-left: 2em; }
+        .footer .inner { grid-template-columns: 100%; grid-template-areas: "contact" "cert1" "cert2"; }
       }
 
       @media only screen and (max-width: 560px) {
         .header .inner ul li a { padding: .2em .4em; border-radius: 1em; }
+        .main { padding: 1em; }
+        .main .inner .content { padding-left: 1em; }
       }
 
       @media only screen and (max-width: 450px) {
         .header .inner .logo img { width: 100%; }
         .header .inner .nav ul li { display: block; text-align: center; margin: 2px 0; }
         .header .inner .nav ul li a { display: block; }
+        .main .inner { grid-template-columns: 100%; grid-template-areas: "content"; }
+        .main .inner .sidebar { display: none; }
+        .main .inner .content { padding: 0; }
         .footer .inner .contact ul li img { display: none; }
       }
     </style>
@@ -100,8 +118,28 @@
         </div>
       </div>
 
-      <div class="main">MAIN</div>
-      <div class="sidebar">SIDEBAR</div>
+      <div class="main">
+        <div class="inner">
+          <div class="sidebar">
+            SIDEBAR
+          </div>
+
+          <div class="content">
+            <h1>Opakowania, pudełka kartonowe i tekturowe</h1>
+            <p>Oferujemy duży wybór pudełek kartonowych oraz tekturowych z dowolną szatą graﬁczną.</p>
+            <p>Istnieje możliwość wykonania projektu graﬁcznego przez nasz zespół graﬁków bądź też zgodnie z projektem klienta.  Posiadamy doświadczenie w produkcji opakowań dla wielu znanych ﬁrm.</p>
+
+            <h2>W naszej ofercie znajdują się:</h2>
+            <ul>
+              <li>opakowania spożywcze i farmaceutyczne</li>
+              <li>opakowania do chemii i kosmetyków</li>
+              <li>opakowania kaszerowane</li>
+              <li>opakowania zbiorcze typu display</li>
+              <li>opakowania typu blister</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div class="footer">
         <div class="inner">
