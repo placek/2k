@@ -34,6 +34,10 @@ body { color: var(--black); background-color: var(--white); }
 .main .inner .sidebar img { display: block; margin: 20px; height: 250px; }
 .main .inner ul { list-style: none; display: block; }
 .main .inner ul li a { display: block; padding: .5em 1em; margin-bottom: .2em; text-decoration: none; border-radius: 2em; text-transform: lowercase;  background-color: var(--gray); color: var(--white); }
+.main .flow { display: flex; align-items: center; justify-content: center; flex-direction: column;}
+.main .flow p { width: 80%; }
+.main .flow img { width: 250px; }
+.main .flow .images { text-align: center }
 
 /* footer */
 .footer .inner { background-color: var(--gray); border-top: 4px solid var(--black); padding: 1em; display: grid; grid-template-columns: 50% 25% 25%; grid-template-rows: auto; grid-template-areas: "contact cert1 cert2"; }
@@ -85,4 +89,5 @@ dd { padding-left: 2em; }
   .main .inner .sidebar { display: none; }
   .main .inner .content { padding: 0; }
   .footer .inner .contact ul li img { display: none; }
+  .main .flow p { width: 100%; }
 }
