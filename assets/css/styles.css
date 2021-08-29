@@ -40,6 +40,9 @@ body { color: var(--black); background-color: var(--white); }
 .main .flex img { width: 250px; margin: 1em; }
 .main .flow .images { text-align: center }
 .main.contact .inner { grid-template-columns: 50% 50%; }
+.main.contact .inner span { display: block; }
+.main.contact .inner a { color: var(--cyan); text-decoration: none; }
+.main.contact .inner a:hover { text-decoration: underline; }
 
 /* footer */
 .footer .inner { background-color: var(--gray); border-top: 4px solid var(--black); padding: 1em; display: grid; grid-template-columns: 50% 25% 25%; grid-template-rows: auto; grid-template-areas: "contact cert1 cert2"; }
@@ -81,11 +84,13 @@ dd { padding-left: 2em; }
   .footer .inner { grid-template-columns: 100%; grid-template-areas: "contact" "cert1" "cert2"; }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
   .header .inner ul li a { padding: .2em .4em; border-radius: 1em; }
   .main { padding: 1em; }
   .main .inner .content { padding-left: 1em; }
   .main .inner .sidebar { padding-right: 1em; }
+  .main.contact .inner { grid-template-columns: 100%; grid-template-areas: "sidebar" "content"; }
+  .main.contact .inner .sidebar { display: block; border: none; margin: 0 0 1em 0; }
 }
 
 @media only screen and (max-width: 500px) {
