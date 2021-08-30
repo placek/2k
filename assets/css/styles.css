@@ -31,18 +31,54 @@ body { color: var(--black); background-color: var(--white); }
 .main .inner { display: grid; grid-template-columns: 30% 70%; grid-template-rows: auto; grid-template-areas: "sidebar content"; }
 .main .inner .sidebar { grid-area: sidebar; border-right: 4px solid var(--black); display: flex; align-items: center; justify-content: flex-end; padding-right: 3em; }
 .main .inner .content { grid-area: content; padding-left: 3em; }
-.main .inner .sidebar img { display: block; margin: 20px; height: 250px; }
+.main .inner .sidebar div { display: block; margin: 20px; }
 .main .inner ul { list-style: none; display: block; }
 .main .inner ul li a { display: block; padding: .5em 1em; margin-bottom: .2em; text-decoration: none; border-radius: 2em; text-transform: lowercase; }
 .main .flow { display: flex; align-items: center; justify-content: center; flex-direction: column;}
 .main .flow p { width: 80%; }
 .main .flex { display: flex; justify-content: center; flex-wrap: wrap; }
-.main .flex img { width: 250px; margin: 1em; }
 .main .flow .images { text-align: center }
 .main.contact .inner { grid-template-columns: 50% 50%; }
 .main.contact .inner span { display: block; }
 .main.contact .inner a { color: var(--cyan); text-decoration: none; }
 .main.contact .inner a:hover { text-decoration: underline; }
+
+.circle { display: inline-flex; width: 12rem; height: 12rem; border-radius: 50%; margin: 1em; background-position: center; background-size: cover; box-shadow: 4px 4px 4px var(--gray); align-items: center; justify-content: center; text-decoration: none; }
+.circle:hover { box-shadow: 8px 8px 8px var(--gray); }
+.circle span { background-color: var(--gray); color: var(--white); padding: .5em; border-radius: 1em; text-transform: lowercase; display: inline-block; text-align: center; font-size: .8em; }
+.circle.packaging1        { background-image: url('../images/image02.png'); }
+.circle.packaging2        { background-image: url('../images/image11.png'); }
+.circle.boxes1            { background-image: url('../images/image23.png'); }
+.circle.boxes2            { background-image: url('../images/image24.png'); }
+.circle.boxes3            { background-image: url('../images/image20.png'); }
+.circle.books1            { background-image: url('../images/image28.png'); }
+.circle.books2            { background-image: url('../images/image34.png'); }
+.circle.advertisment1     { background-image: url('../images/image29.png'); }
+.circle.advertisment2     { background-image: url('../images/image06.png'); }
+.circle.advertisment3     { background-image: url('../images/image35.png'); }
+.circle.advertisment4     { background-image: url('../images/image46.png'); }
+.circle.calendars1        { background-image: url('../images/image33.png'); }
+.circle.calendars2        { background-image: url('../images/image37.png'); }
+.circle.calendars3        { background-image: url('../images/image36.png'); }
+.circle.displays1         { background-image: url('../images/image47.png'); }
+.circle.displays2         { background-image: url('../images/image38.png'); }
+.circle.displays3         { background-image: url('../images/image12.png'); }
+.circle.office_supplies1  { background-image: url('../images/image30.png'); }
+.circle.office_supplies2  { background-image: url('../images/image39.png'); }
+.circle.office_supplies3  { background-image: url('../images/image13.png'); }
+.circle.laminating1       { background-image: url('../images/image22.png'); }
+.circle.laminating2       { background-image: url('../images/image41.png'); }
+.circle.uv_paint1         { background-image: url('../images/image32.png'); }
+.circle.uv_paint2         { background-image: url('../images/image40.png'); }
+.circle.blister1          { background-image: url('../images/image07.png'); }
+.circle.blister2          { background-image: url('../images/image45.png'); }
+.circle.digital_printing1 { background-image: url('../images/image26.png'); }
+.circle.digital_printing2 { background-image: url('../images/image44.png'); }
+.circle.digital_printing3 { background-image: url('../images/image43.png'); }
+.circle.others1           { background-image: url('../images/image27.png'); }
+.circle.others2           { background-image: url('../images/image03.png'); }
+.circle.others3           { background-image: url('../images/image42.png'); }
+.circle.cert              { background-image: url('../images/image21.png'); }
 
 /* footer */
 .footer .inner { background-color: var(--gray); border-top: 4px solid var(--black); padding: 1em; display: grid; grid-template-columns: 50% 25% 25%; grid-template-rows: auto; grid-template-areas: "contact cert1 cert2"; }
