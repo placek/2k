@@ -50,7 +50,7 @@ body { color: var(--black); background-color: var(--white); }
 .footer .inner .cert2   { grid-area: cert2;   display: flex; align-items: center; justify-content: center; flex-direction: column; }
 .footer .inner .cert3   { grid-area: cert3;   display: flex; align-items: center; justify-content: center; }
 .footer .inner .cert3 img { max-width: 450px; }
-.footer .inner .cert2 img { max-width: 300px; border: 10px solid white; margin-bottom: 10px; }
+.footer .inner .cert2 img { max-width: 300px; border: 1em solid white; margin-bottom: .9em; }
 .footer .inner .cert2 p   { font-size: .7em; color: var(--white); }
 
 .footer .inner ul { list-style: none; display: block; color: var(--white); }
@@ -112,6 +112,8 @@ dd { padding-left: 2em; }
 .circle.others2           { background-image: url('../images/image03.png'); }
 .circle.others3           { background-image: url('../images/image42.png'); }
 .circle.cert              { background-image: url('../images/image21.png'); }
+.circle.cert span         { text-transform: none; }
+sup { font-size: .8em; }
 
 /* responsive design */
 @media only screen and (max-width: 1020px) {
