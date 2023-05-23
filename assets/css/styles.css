@@ -46,7 +46,7 @@ body { color: var(--black); background-color: var(--white); }
 /* footer */
 .footer .inner { background-color: var(--gray); border-top: 4px solid var(--black); padding: 1em; display: grid; grid-template-columns: 40% 20% 20% 20%; grid-template-rows: auto; grid-template-areas: "contact cert1 cert2 cert3"; }
 .footer .inner .contact { grid-area: contact; display: flex; align-items: center; justify-content: center; }
-.footer .inner .cert1   { grid-area: cert1;   display: flex; align-items: center; justify-content: center; }
+.footer .inner .cert1   { grid-area: cert1;   display: none; align-items: center; justify-content: center; }
 .footer .inner .cert2   { grid-area: cert2;   display: flex; align-items: center; justify-content: center; flex-direction: column; }
 .footer .inner .cert3   { grid-area: cert3;   display: flex; align-items: center; justify-content: center; }
 .footer .inner .cert3 img { max-width: 450px; }
