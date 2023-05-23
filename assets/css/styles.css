@@ -116,7 +116,7 @@ dd { padding-left: 2em; }
 sup { font-size: .8em; }
 
 /* responsive design */
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1500px) {
   .header .inner { grid-template-columns: 100%; grid-template-areas: "logo" "nav" "lang"; }
   .header .inner .nav  { align-items: center; justify-content: center; padding: 1em 0; }
   .header .inner .lang { align-items: center; justify-content: center; padding: 1em 0; }
